@@ -3,17 +3,17 @@ import { buildMetadata, getBreadcrumbSchema } from '@/utils/seoConfig';
 import SeoWrapper from "@/components/SeoWrapper/SeoWrapper";
 
 
-export const metadata = buildMetadata("about");
+export const metadata = buildMetadata("capabilities");
 export const dynamic = "force-static";
 // This page is SSG by default in Next.js 13+ App Router
-export default function aboutPage() {
+export default function capabilitiesPage() {
    const breadcrumb = getBreadcrumbSchema([
     { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
+    { name: "capabilities", href: "/capabilities" },
   ]);
    
   return (
-    <SeoWrapper pageUrl="/about" schemas={[breadcrumb]}>
+    <SeoWrapper pageUrl="/capabilities" schemas={[breadcrumb]}>
     <div className="min-h-screen bg-gradient-to-br pt-10 from-sky-50 to-blue-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -33,7 +33,5 @@ export default function aboutPage() {
       </div>
     </div>
     </SeoWrapper>
-   
   );
-  
 }
